@@ -10,8 +10,9 @@ router.get('/', function (req, res) {
 
 router.get('/test', function (req, res) {
     //var result = testConn.testConnection();
-    var users = Users.findAll();
-    res.render('users', { title: 'Express Users', users: users });
+    var users = Users.findAll().then(function (users) {
+        res.render('users', { title: 'Express Users', users: users });
+    });
 });
 
 module.exports = router;

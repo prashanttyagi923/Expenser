@@ -3,4 +3,12 @@
 block content
   h1= title
   p Welcome to #{title}
-  p Users #{users}
+  h1 Users 
+  table(class="list-tab") 
+      each key in users
+        tr
+            th Name
+            th  Email
+        tr
+            td #{key.Name}
+            td #{key.Email}
