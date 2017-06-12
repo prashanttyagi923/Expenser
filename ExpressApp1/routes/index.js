@@ -1,6 +1,6 @@
 ﻿var express = require('express');
 var router = express.Router();
-var Users = require('../data_repositories/UserRepository');
+var Users = require('../data_repositories/userRepository');
 
 /* GET home page. */
 
@@ -10,8 +10,8 @@ router.get('/', function (req, res) {
 
 router.get('/test', function (req, res) {
     //var result = testConn.testConnection();
-    var users = Users.findAll().then(function (users) {
-        res.render('users', { title: 'Express Users', users: users });
+    return Users.findAll().then(function (users) {
+         res.render('users', { title: 'Express Users', users: users });
     });
 });
 

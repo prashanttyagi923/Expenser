@@ -1,0 +1,14 @@
+﻿extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h1 Users 
+  table(class="list-tab") 
+      each key in users
+        tr
+            th Name
+            th  Created By
+        tr
+            td #{key.Name}
+            td #{key.CreatedBy}

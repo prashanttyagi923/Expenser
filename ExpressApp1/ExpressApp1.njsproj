@@ -33,14 +33,18 @@
     <Compile Include="app.js" />
     <Compile Include="data_repositories\connection.js" />
     <Compile Include="data_repositories\testConnection.js" />
-    <Compile Include="data_repositories\UserRepository.js" />
-    <Compile Include="model\Users.js" />
+    <Compile Include="data_repositories\expenseGroupRepository.js" />
+    <Compile Include="data_repositories\userRepository.js" />
+    <Compile Include="model\expenseGroup.js" />
+    <Compile Include="model\users.js" />
+    <Compile Include="routes\expenseGroup.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
+    <Content Include="views\expenseGroup\expenseGroup.jade" />
     <Content Include="views\users.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
@@ -60,6 +64,7 @@
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\node\" />
     <Folder Include="views\" />
+    <Folder Include="views\expenseGroup\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
