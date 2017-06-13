@@ -3,7 +3,7 @@ var Sequelize = require('sequelize');
 
 var userRepository = {
     findAll: function () {
-        model.Users.findAll().then(users => {
+        return model.Users.findAll().then(users => {
             console.log(users);
             return users;
         });

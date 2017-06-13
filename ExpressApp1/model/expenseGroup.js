@@ -8,13 +8,15 @@ const ExpenseGroup = sequelize.define('ExpenseGroup', {
     Detail: { type: Sequelize.STRING, allowNull: true },
     GroupId: { type: Sequelize.INTEGER, allowNull: false, autoIncrement: true, primaryKey: true },
     CreatedBy: {
-        type: Sequelize.INTEGER, allowNull: false, references: {
+        type: Sequelize.INTEGER, 
+        allowNull: false, 
+        references: {
             model: user.Users,
             key: 'UserId',
         }
     }
 });
-ExpenseGroup.sync({ force: true }).then(() => {
+ExpenseGroup.sync().then(() => {
 // Table created
     return ExpenseGroup.create({
         Name: 'Katra Group',
